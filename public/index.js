@@ -29,18 +29,20 @@ function handleSearchInput(event){
 	var reviews = document.querySelectorAll('.review');
 	var container = document.getElementsByClassName('review-container');
 	var input = document.getElementById('nav-search-input').value;
-	var twitsText;//= document.getElementsByClassName('twit-text');
-	var twitContent;
-	for(i = 0; i < twits.length; i++){
-  	twitsText = twits[i].getElementsByClassName('review-text');
-  	twitContent = twitsText[0].textContent;
-  	if(!twitContent.includes(input)){
+	var reviewText;//= document.getElementsByClassName('twit-text');
+	var reviewContent;
+	for(i = 0; i < reviews.length; i++){
+  	reviewText = reviews[i].getElementsByClassName('review-text');
+  	reviewContent = reviewText[0].textContent;
+  	if(!reviewContent.includes(input)){
   	  // container[0].removeChild(twits[i]);
   	  // twits[i].parentNode.removeChild(twits[i]);
-  	  twitsText[i].parentNode.parentNode.setAttribute('style', 'display:none;');
+      reviews[i].setAttribute('style', 'display:none;');
+  	  // reviewText[i].parentNode.parentNode.setAttribute('style', 'display:none;');
   	}
   	else{
-  	  twitsText[i].parentNode.parentNode.setAttribute('style', 'display:flex;');
+  	  // reviewText[i].parentNode.parentNode.setAttribute('style', 'display:flex;');
+      reviews[i].setAttribute('style', 'display:block;');
   	}
 	}
 }
