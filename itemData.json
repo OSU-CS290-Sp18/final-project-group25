@@ -1,0 +1,24 @@
+{
+  "itemName": {
+    "name": "name to display",
+    "photos": "url for photo",
+    "reviews": [
+      {
+        "reviewContent": "Text for review",
+        "author": "author name"
+      },
+      {
+        "reviewContent": "Text for review",
+        "author": "author name"
+      },
+      {
+        "reviewContent": "Text for review",
+        "author": "author name"
+      },
+      {
+        "reviewContent": "Text for review",
+        "author": "author name"
+      }
+    ]
+  }
+}
