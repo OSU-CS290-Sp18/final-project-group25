@@ -13,7 +13,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 app.get('/', function(req, res){
-  res.status(200).render('itemPage', {
+  res.status(200).render('featurePage', {
     items: itemData
   });
 });
@@ -21,9 +21,15 @@ app.get('/', function(req, res){
 app.get('/featured/:item', function (req, res, next) {
   var item = Number(req.params.item);
                             //insert number of items
-  if(itemData[item] && (item >= 0 && item <= numItems)){
+  if(true){
+    var firstItem = itemData["watermelon"];
+    var reviews = firstItem["reviews"];
+    var photos = firstItem["photos"];
+    var name = firstItem["name"];
     res.status(200).render('itemPage', {
-      items: [itemData[item]]
+      name: name,
+      photos: photos,
+      reviews: reviews
     });
   }
   else{
