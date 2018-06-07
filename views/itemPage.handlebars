@@ -1,32 +1,21 @@
 <div class= "name-container">
 	<p>
-		Name of Item
+		{{name}}
 	</p>
 </div>
 
 <div class="photos-container">
-	<section class="photo">
-		<div class="image-container">
-			<img class="product-image" src="https://desibantu.com/wp-content/uploads/2014/06/watermelon_desibantu.jpg">
-		</div>
-	</section>
-	<section class="photo">
-		<div class="image-container">
-			<img class="product-image" src="https://assets.marthastewart.com/styles/wmax-750/d20/LD104202-melon-card1/LD104202-melon-card1_horiz.jpg?itok=Z8SIz3Co">
-		</div>
-	</section>
-	<section class="photo">
-		<div class="image-container">
-			<img class="product-image" src="https://www.watermelon.org/img/Carvings/HedgehogMedium.png">
-		</div>
-	</section>
+	
+	{{#each photos}}
+		{{> photo}}
+	{{each}}
 
 </div>
 
 <main class="review-container">
 	
 
-	{{#each}}
+	{{#each reviews}}
 		{{> review}}
 	{{each}}
 
@@ -35,30 +24,30 @@
 
 <button type="button" id="create-review-button"><i class="fas fa-plus"></i></button>
 
-		<div id="modal-backdrop" class="hidden"></div>
-		<div id="create-review-modal" class="hidden">
-		  <div class="modal-dialog">
+<div id="modal-backdrop" class="hidden"></div>
+<div id="create-review-modal" class="hidden">
+  <div class="modal-dialog">
 
-		    <div class="modal-header">
-		      <h3>Write a Review</h3>
-		      <button type="button" class="modal-close-button">&times;</button>
-		    </div>
+    <div class="modal-header">
+      <h3>Write a Review</h3>
+      <button type="button" class="modal-close-button">&times;</button>
+    </div>
 
-		    <div class="modal-body">
-		      <div class="review-input-element">
-		        <label for="review-text-input">Review Content</label>
-		        <textarea id="review-text-input"></textarea>
-		      </div>
-		      <div class="review-input-element">
-		        <label for="review-attribution-input">Author</label>
-		        <input type="text" id="review-attribution-input">
-		      </div>
-		    </div>
+    <div class="modal-body">
+      <div class="review-input-element">
+        <label for="review-text-input">Review Content</label>
+        <textarea id="review-text-input"></textarea>
+      </div>
+      <div class="review-input-element">
+        <label for="review-attribution-input">Author</label>
+        <input type="text" id="review-attribution-input">
+      </div>
+    </div>
 
-		    <div class="modal-footer">
-		      <button type="button" class="modal-cancel-button">Cancel</button>
-		      <button type="button" class="modal-accept-button">Create Review</button>
-		    </div>
+    <div class="modal-footer">
+      <button type="button" class="modal-cancel-button">Cancel</button>
+      <button type="button" class="modal-accept-button">Create Review</button>
+    </div>
 
-		  </div>
-		</div>
+  </div>
+</div>
