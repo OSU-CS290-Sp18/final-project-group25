@@ -32,18 +32,9 @@ app.get('/featured/:item', function (req, res, next) {
 });
 
 app.get('*', function (req, res){
-  res.status(404).render('404')
+  res.status(404).render('404');
 });
 
-
-app.get('/people/:person', function (req, res, next) {
-  var person = req.params.person.toLowerCase();
-  if (peopleData[person]) {
-    res.status(200).render('photoPage', peopleData[person]);
-  } else {
-    next();
-  }
-});
 
 app.listen(port, function () {
   console.log("== Server listening on port", port);

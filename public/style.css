@@ -194,9 +194,6 @@ a:hover {
   outline: none;
 }
 
-/*
- * Modal stuff
- */
 #modal-backdrop {
   position: fixed;
   top: 0;
@@ -221,22 +218,6 @@ a:hover {
   display: none;
 }
 
-.action-button {
-  font-size: 20px;
-  color: white;
-  padding: 10px;
-  background-color: #000;
-  border: 1px solid #ababab;
-  border-radius: 5px;
-  font-weight: lighter;
-  cursor: pointer;
-}
-
-.action-button:hover {
-  background-color: #e78477;
-  border-color: #333;
-}
-
 .modal-dialog {
   width: auto;
   max-width: 600px;
@@ -257,7 +238,7 @@ a:hover {
   font-size: 28px;
 }
 
-#modal-close {
+.modal-close-button {
   position: absolute;
   right: 10px;
   top: 5px;
@@ -279,17 +260,22 @@ a:hover {
   margin: 10px 0;
 }
 
-.review-input-element > label {
+.review-input-element label {
   font-weight: 600;
   flex: 1 75px;
   margin-right: 10px;
 }
 
-.review-input-element input {
+.review-input-element input,
+.review-input-element textarea {
   flex: 6 200px;
   padding: 8px;
   font-size: 20px;
   border: 1px solid #aaa;
+}
+
+.review-input-element textarea {
+  min-height: 64px;
 }
 
 .modal-footer {
@@ -298,16 +284,43 @@ a:hover {
   padding: 10px 10px 20px 10px;
 }
 
-#modal-cancel,
-#modal-accept {
-  margin-right: 20px;
-}
-
-#modal-cancel {
-  color: #333;
+.modal-footer button {
+  font-size: 20px;
   background-color: #fff;
+  color: #333;
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 10px;
+  margin-right: 20px;
+  cursor: pointer;
 }
 
-#modal-cancel:hover {
+.modal-footer .modal-cancel-button:hover {
   background-color: #eee;
+}
+
+.modal-footer .modal-accept-button {
+  background-color: #ff0000;
+  color: #fff;
+}
+
+.modal-footer .modal-accept-button:hover {
+  background-color: #087dde;
+}
+
+.error-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.error-container h2 {
+  margin: 10px 0;
+  font-size: 96px;
+  font-weight: 100;
+}
+
+.error-container h3 {
+  margin: 10px 0;
+  font-size: 36px;
+  font-weight: 400;
 }
