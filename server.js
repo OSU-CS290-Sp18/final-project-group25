@@ -2,7 +2,7 @@ var path = require('path');
 var express = require('express');
 var exphbs = require('express-handlebars');
 
-var peopleData = require('./itemData');
+var itemData = require('./itemData');
 
 var app = express();
 var port = process.env.PORT || 3005;
@@ -35,13 +35,7 @@ app.get('*', function (req, res){
   res.status(404).render('404')
 });
 
-// var availablePeople = [
-//   'beyonce',
-//   'einstein',
-//   'luke',
-//   'marie',
-//   'ta-nehisi'
-// ];
+
 app.get('/people/:person', function (req, res, next) {
   var person = req.params.person.toLowerCase();
   if (peopleData[person]) {
