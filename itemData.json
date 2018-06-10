@@ -35,7 +35,77 @@
   },
 
   {
-    "controller": {
+    "switch": {
+      "name": "Nintendo Switch",
+      "photos": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Nintendo-Switch-Console-Docked-wJoyConRB.jpg"
+        },
+        {
+          "url": "https://cnet1.cbsistatic.com/img/zQ4d2DqUm34BzEPzlBWvNz48XV8=/770x433/2017/02/23/5bf20b56-a1a7-4587-868f-f9f848dbc7bf/nintendo-switch-console-4923.jpg"
+        },
+        {
+          "url": "https://cdn.wccftech.com/wp-content/uploads/2018/05/WCCFnintendoswitch2-740x429.jpg"
+        }
+      ],
+      "reviews": [
+        {
+          "reviewContent": "I love how many ways there are to play.",
+          "author": "Burt Smith"
+        },
+        {
+          "reviewContent": "Get Mario Kart with it!!",
+          "author": "The Editor of the New York Times"
+        },
+        {
+          "reviewContent": "Easy to play on the go.",
+          "author": "Seth Rogen"
+        },
+        {
+          "reviewContent": "Love connecting it to my home tv.",
+          "author": "Braam"
+        }
+      ]
+    }
+  },
+
+  {
+    "Pcontroller": {
+      "name": "PS4 Controller",
+      "photos": [
+        {
+          "url": "https://desibantu.com/wp-content/uploads/2014/06/watermelon_desibantu.jpg"
+        },
+        {
+          "url": "https://assets.marthastewart.com/styles/wmax-750/d20/LD104202-melon-card1/LD104202-melon-card1_horiz.jpg?itok=Z8SIz3Co"
+        },
+        {
+          "url": "https://cdn3.volusion.com/lnxhw.lsjwt/v/vspfiles/photos/PS4-White-Out-2.jpg"
+        }
+      ],
+      "reviews": [
+        {
+          "reviewContent": "The shape is weird.",
+          "author": "Jim Halpert"
+        },
+        {
+          "reviewContent": "Well it's good just not as good as the xbox controller.",
+          "author": "Michael Scott"
+        },
+        {
+          "reviewContent": "Could use better feeling plastic.",
+          "author": "Pam Halpert"
+        },
+        {
+          "reviewContent": "I love this controller!!",
+          "author": "Braam"
+        }
+      ]
+    }
+  },
+
+  {
+    "Xcontroller": {
       "name": "Xbox Controller",
       "photos": [
         {
