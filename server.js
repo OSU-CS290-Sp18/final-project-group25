@@ -7,8 +7,15 @@ var MongoClient = require('mongodb').MongoClient;
 var itemData = require('./itemData');
 
 
+var mongoHost = process.env.MONGO_HOST;
+var mongoPort = process.env.MONGO_PORT || '27017';
+var mongoUsername = process.env.MONGO_USERNAME;
+var mongoPassword= process.env.MONGO_PASSWORD;
+var mongoDBName = process.env.MONGO_DB_NAME;
 
+var mongoURL = "mongodb://" + mongoUsername + ":" + mongoPassword + "@" + mongoHost + ":" + mongoPort + "/" +mongoDBName;
 
+var mongoDB = null;
 
 
 
@@ -21,6 +28,7 @@ app.set('view engine', 'handlebars');
 app.use(express.static('public'));
 
 app.get('/', function(req, res){
+  var itemDataMongo = mongoDB.collection('items');
   res.status(200).render('featurePage', {
     items: itemData
   });
@@ -50,6 +58,15 @@ app.get('*', function (req, res){
 });
 
 
-app.listen(port, function () {
-  console.log("== Server listening on port", port);
+
+MongoClient.connect(mongoURL, function(err, client) {
+  if(err){
+    throw err;
+  }
+
+  mongoDB = client.db(mongoDBName);
+  app.listen(port, function () {
+    console.log("== Server listening on port", port);
+  });
+
 })
