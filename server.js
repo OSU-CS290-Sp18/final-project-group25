@@ -48,21 +48,14 @@ app.get('/', function(req, res){
 });
 
 app.get('/featured/:item', function (req, res, next) {
-  var item = req.params.person.toLowerCase();
+  var item = req.params.item;
   var itemCollection = mongoDB.collection('items');
-  itemCollection.find({ itemId: item }).toArray(function (err, itemDocs){
+  itemCollection.find({name: item}).toArray(function (err, itemDocs){
+    console.log(itemDocs);
     if(err){
       res.status(500).send("Error fetching item from DB.");
     } else if(itemDocs.length > 0){
-      var firstItem = itemData["watermelon"];
-      var reviews = firstItem["reviews"];
-      var photos = firstItem["photos"];
-      var name = firstItem["name"];
-      res.status(200).render('itemPage', {
-        name: name,
-        photos: photos,
-        reviews: reviews
-      });
+      res.status(200).render('itemPage', itemDocs[0]);
     } else{
       next();
     }
