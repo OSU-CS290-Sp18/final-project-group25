@@ -46,7 +46,7 @@ app.get('/', function(req, res, next){
 
 app.get('/featured', function(req, res){
   var itemCollection = mongoDB.collection('itemData');
-  itemCollection.find().toArray(function(err, items){
+  itemCollection.find({id: "featured"}).toArray(function(err, items){
     if(err){
       res.status(500).send("Error fetching item from DB.");
     } else if(items.length > 0){
@@ -56,7 +56,7 @@ app.get('/featured', function(req, res){
 });
 
 app.get('/featured/:item', function (req, res, next) {
-  var item = req.params.item;
+  var item = req.params.item.toLowerCase();
   var itemCollection = mongoDB.collection('itemData');
   itemCollection.find({name: item}).toArray(function (err, itemDocs){
     console.log(itemDocs);
@@ -69,7 +69,25 @@ app.get('/featured/:item', function (req, res, next) {
     }
   });
 });
-
+/*
+app.post('/people/:item/addReview', function(req, res, next){
+  var item = req.params.item.toLowerCase();
+  if(itemData[item]){
+    if(req.body && req.body.reviewContent && req.body.author){
+      var review = {
+        reviewContent = req.body.reviewContent,
+        author = req.body.author
+      };
+      itemData[item].review.push(review);
+      res.status(200).end();
+    } else {
+      res.status(400).send("Request needs a JSON body with caption and photoURL.")
+    }
+  } else{
+    next();
+  }
+});
+*/
 app.get('*', function (req, res){
   res.status(404).render('404');
 });

@@ -56,6 +56,8 @@ searchBarButton.addEventListener('click', handleSearchInput);
 
 var createBtn = document.getElementsByClassName('modal-accept-button');
 
+function get
+
 function handleCreateReview(event){
   var modal = document.getElementById('create-review-modal');
   var modalReviewText = modal.querySelector('.modal-body .review-input-element #review-text-input');
@@ -68,6 +70,11 @@ function handleCreateReview(event){
     alert('Every review must have an author');
     return;
   }
+
+	var request = new NMLHttpRequest();
+	var personID = getPersonIdFromURL();
+
+	/*
   var newReview = document.createElement('article');
   newReview.setAttribute('class', 'review');
 
@@ -118,10 +125,8 @@ function handleCreateReview(event){
   // twitContainer.insertAdjacentHTML('beforeend', newTwitHTML);
 
 
-
+*/
   handleToggleModal();
 }
 
 createBtn[0].addEventListener('click', handleCreateReview);
-
-
