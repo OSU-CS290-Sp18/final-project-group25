@@ -4,6 +4,17 @@ var exphbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 var MongoClient = require('mongodb').MongoClient;
 
+var mongoHost = process.env.MONGO_HOST;
+var mongoPort = process.env.MONGO_PORT || '27017';
+var mongoUsername = process.env.MONGO_USERNAME;
+var mongoPassword = process.env.MONGO_PASSWORD;
+var mongoDBName = process.env.MONGO_DB_NAME;
+
+var mongoURL = "mongodb://" + mongoUsername + ":" + mongoPassword +
+  "@" + mongoHost + ":" + mongoPort +  "/" + mongoDBName;
+
+var mongoDB = null;
+
 var itemData = require('./itemData');
 
 
@@ -25,6 +36,8 @@ var port = process.env.PORT || 3005;
 app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
+app.use(bodyParser.json());
+
 app.use(express.static('public'));
 
 app.get('/', function(req, res){
@@ -35,22 +48,18 @@ app.get('/', function(req, res){
 });
 
 app.get('/featured/:item', function (req, res, next) {
-  var item = Number(req.params.item);
-                            //insert number of items
-  if(true){
-    var firstItem = itemData["watermelon"];
-    var reviews = firstItem["reviews"];
-    var photos = firstItem["photos"];
-    var name = firstItem["name"];
-    res.status(200).render('itemPage', {
-      name: name,
-      photos: photos,
-      reviews: reviews
-    });
-  }
-  else{
-    next();
-  }
+  var item = req.params.item;
+  var itemCollection = mongoDB.collection('items');
+  itemCollection.find({name: item}).toArray(function (err, itemDocs){
+    console.log(itemDocs);
+    if(err){
+      res.status(500).send("Error fetching item from DB.");
+    } else if(itemDocs.length > 0){
+      res.status(200).render('itemPage', itemDocs[0]);
+    } else{
+      next();
+    }
+  });
 });
 
 app.get('*', function (req, res){
