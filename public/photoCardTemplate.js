@@ -5,7 +5,7 @@ templates['photoCard'] = template({"compiler":[7,">= 4.0.0"],"main":function(con
 
   return "<section class=\"photo-item\">\r\n	<div class=\"image-container\">\r\n		<img class=\"product-image\" src="
     + alias4(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"url","hash":{},"data":data}) : helper)))
-    + ">\r\n	</div>\r\n	<div class=\"item-name\">\r\n		<a href = \"/featured/"
+    + ">\r\n	</div>\r\n	<div class=\"item-name\">\r\n		<a href = \"/items/"
     + alias4(((helper = (helper = helpers.to || (depth0 != null ? depth0.to : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"to","hash":{},"data":data}) : helper)))
     + "\">"
     + alias4(((helper = (helper = helpers.item || (depth0 != null ? depth0.item : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"item","hash":{},"data":data}) : helper)))

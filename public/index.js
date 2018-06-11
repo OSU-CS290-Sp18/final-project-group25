@@ -14,11 +14,17 @@ function handleToggleModal (event){
   modalTwitAuthor.value = '';
 };
 
-buttonID.addEventListener('click', handleToggleModal);
+if(buttonID != null){
+  buttonID.addEventListener('click', handleToggleModal);
+}
 var xOutModal = document.getElementsByClassName('modal-close-button');
 var cancelModal = document.getElementsByClassName('modal-cancel-button');
-xOutModal[0].addEventListener('click', handleToggleModal);
-cancelModal[0].addEventListener('click', handleToggleModal);
+if(xOutModal[0] != null){
+  xOutModal[0].addEventListener('click', handleToggleModal);
+}
+if(cancelModal[0] != null){
+  cancelModal[0].addEventListener('click', handleToggleModal);
+}
 
 
 
@@ -33,7 +39,7 @@ function handleSearchInput(event){
 	var reviewContent;
 	for(i = 0; i < reviews.length; i++){
   	reviewText = reviews[i].getElementsByClassName('review-text');
-  	reviewContent = reviewText[0].textContent;
+  	reviewContent = reviewText[0].textContent.toLowerCase();
   	if(!reviewContent.includes(input)){
   	  // container[0].removeChild(twits[i]);
   	  // twits[i].parentNode.removeChild(twits[i]);
@@ -56,7 +62,7 @@ searchBarButton.addEventListener('click', handleSearchInput);
 
 var createBtn = document.getElementsByClassName('modal-accept-button');
 
-function get
+//function get
 
 function handleCreateReview(event){
   var modal = document.getElementById('create-review-modal');
@@ -71,46 +77,46 @@ function handleCreateReview(event){
     return;
   }
 
-	var request = new NMLHttpRequest();
-	var personID = getPersonIdFromURL();
+	// var request = new XMLHttpRequest();
+	// var personID = getPersonIdFromURL();
 
-	/*
-  var newReview = document.createElement('article');
-  newReview.setAttribute('class', 'review');
+	
+  // var newReview = document.createElement('article');
+  // newReview.setAttribute('class', 'review');
 
-  console.log(modalReviewText.value);
-  console.log(modalReviewAuthor.value);
-  // var iconDiv = document.createElement('div');
-  // iconDiv.setAttribute('class', 'review-icon');
-  // var icon = document.createElement('i');
-  // icon.setAttribute('class', 'fas fa-bullhorn');
-  // iconDiv.appendChild(icon);
+  // console.log(modalReviewText.value);
+  // console.log(modalReviewAuthor.value);
+  // // var iconDiv = document.createElement('div');
+  // // iconDiv.setAttribute('class', 'review-icon');
+  // // var icon = document.createElement('i');
+  // // icon.setAttribute('class', 'fas fa-bullhorn');
+  // // iconDiv.appendChild(icon);
 
 
-  var textDiv = document.createElement('div');
-  textDiv.setAttribute('class', 'review-content');
+  // var textDiv = document.createElement('div');
+  // textDiv.setAttribute('class', 'review-content');
 
-  var text = document.createElement('p');
-  text.setAttribute('class', 'review-text');
-  text.textContent = modalReviewText.value;
-  textDiv.appendChild(text);
+  // var text = document.createElement('p');
+  // text.setAttribute('class', 'review-text');
+  // text.textContent = modalReviewText.value;
+  // textDiv.appendChild(text);
 
-  var author = document.createElement('p');
-  author.setAttribute('class', 'review-author');
-  // var authorRef = document.createElement('a');
-  // authorRef.setAttribute('href', '#');
-  author.textContent = modalReviewAuthor.value;
-  // author.appendChild(authorRef);
+  // var author = document.createElement('p');
+  // author.setAttribute('class', 'review-author');
+  // // var authorRef = document.createElement('a');
+  // // authorRef.setAttribute('href', '#');
+  // author.textContent = modalReviewAuthor.value;
+  // // author.appendChild(authorRef);
 
-  textDiv.appendChild(text);
-  textDiv.appendChild(author);
+  // textDiv.appendChild(text);
+  // textDiv.appendChild(author);
 
-  // newTwit.appendChild(iconDiv);
-  newReview.appendChild(textDiv);
+  // // newTwit.appendChild(iconDiv);
+  // newReview.appendChild(textDiv);
 
-  var container = document.querySelector('.review-container');
+  // var container = document.querySelector('.review-container');
 
-  container.appendChild(newReview);
+  // container.appendChild(newReview);
 
 
   // var twitContainer = document.querySelector('main.twit-container');
@@ -125,8 +131,11 @@ function handleCreateReview(event){
   // twitContainer.insertAdjacentHTML('beforeend', newTwitHTML);
 
 
-*/
+
   handleToggleModal();
 }
 
-createBtn[0].addEventListener('click', handleCreateReview);
+if(createBtn[0] != null){
+  createBtn[0].addEventListener('click', handleCreateReview);
+}
+

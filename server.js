@@ -18,11 +18,11 @@ var mongoDB = null;
 var itemData = require('./itemData');
 
 
-var mongoHost = process.env.MONGO_HOST;
+var mongoHost = "classmongo.engr.oregonstate.edu";//process.env.MONGO_HOST;
 var mongoPort = process.env.MONGO_PORT || '27017';
-var mongoUsername = process.env.MONGO_USERNAME;
-var mongoPassword= process.env.MONGO_PASSWORD;
-var mongoDBName = process.env.MONGO_DB_NAME;
+var mongoUsername = "cs290_doshin";//process.env.MONGO_USERNAME;
+var mongoPassword= "cs290_doshin";//process.env.MONGO_PASSWORD;
+var mongoDBName = "cs290_doshin"; //process.env.MONGO_DB_NAME;
 
 var mongoURL = "mongodb://" + mongoUsername + ":" + mongoPassword + "@" + mongoHost + ":" + mongoPort + "/" +mongoDBName;
 
@@ -41,7 +41,14 @@ app.use(bodyParser.json());
 app.use(express.static('public'));
 
 app.get('/', function(req, res, next){
-  next();
+   var itemCollection = mongoDB.collection('itemData');
+  itemCollection.find({id: "featured"}).toArray(function(err, items){
+    if(err){
+      res.status(500).send("Error fetching item from DB.");
+    } else if(items.length > 0){
+      res.status(200).render('featurePage', items[0]);
+    }
+  });
 });
 
 app.get('/featured', function(req, res){
@@ -55,7 +62,18 @@ app.get('/featured', function(req, res){
   });
 });
 
-app.get('/featured/:item', function (req, res, next) {
+app.get('/funny', function(req, res){
+  var itemCollection = mongoDB.collection('itemData');
+  itemCollection.find({id: "funny"}).toArray(function(err, items){
+    if(err){
+      res.status(500).send("Error fetching item from DB.");
+    } else if(items.length > 0){
+      res.status(200).render('featurePage', items[0]);
+    }
+  });
+});
+
+app.get('/items/:item', function (req, res, next) {
   var item = req.params.item.toLowerCase();
   var itemCollection = mongoDB.collection('itemData');
   itemCollection.find({name: item}).toArray(function (err, itemDocs){

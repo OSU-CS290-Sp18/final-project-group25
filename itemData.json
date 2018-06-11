@@ -58,7 +58,7 @@
         "author": "The Editor of the New York Times"
       },
       {
-        "reviewContent": "Easy to play on the go.",
+        "reviewContent": "Easy to play on the go 👍",
         "author": "Seth Rogen"
       },
       {
@@ -96,7 +96,7 @@
         "author": "Pam Halpert"
       },
       {
-        "reviewContent": "I love this controller!!",
+        "reviewContent": "I love this controller!! ❤",
         "author": "Braam"
       }
     ]
@@ -122,15 +122,15 @@
         "author": "Mike"
       },
       {
-        "reviewContent": "Love it!!",
+        "reviewContent": "Love it!! 🎺",
         "author": "Dave Matthews"
       },
       {
-        "reviewContent": "I wish it had more features, but it's a good controller",
+        "reviewContent": "I wish it had more features, but it's a good controller 👌",
         "author": "Jimmy Newtron"
       },
       {
-        "reviewContent": "It's delicious and nutricious!!",
+        "reviewContent": "🚗 I can cars with this controller.",
         "author": "Jakey"
       }
     ]
@@ -154,11 +154,20 @@
         "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Nintendo-Switch-Console-Docked-wJoyConRB.jpg",
         "item" : "Nintendo Switch",
         "to" : "nintendoswitch"
-      },
+      }
+
+    ]
+  },
+
+
+  {
+
+    "id" : "funny",
+    "cards": [
       {
         "url": "https://desibantu.com/wp-content/uploads/2014/06/watermelon_desibantu.jpg",
         "item" : "Watermelon",
-        "to" : "nintendoswitch"
+        "to" : "watermelon"
       }
 
     ]
