@@ -1,142 +1,135 @@
 [
   {
-    "watermelon": {
-      "name": "Watermelon",
-      "photos": [
-        {
-          "url": "https://desibantu.com/wp-content/uploads/2014/06/watermelon_desibantu.jpg"
-        },
-        {
-          "url": "https://assets.marthastewart.com/styles/wmax-750/d20/LD104202-melon-card1/LD104202-melon-card1_horiz.jpg?itok=Z8SIz3Co"
-        },
-        {
-          "url": "https://www.watermelon.org/img/Carvings/HedgehogMedium.png"
-        }
-      ],
-      "reviews": [
-        {
-          "reviewContent": "The taste just was not as good as I thought it would be",
-          "author": "Ted Mosby"
-        },
-        {
-          "reviewContent": "Love it!!",
-          "author": "Marshall Erikson"
-        },
-        {
-          "reviewContent": "Looks nothing like the porcupine in the picture",
-          "author": "Lily Alrden"
-        },
-        {
-          "reviewContent": "It's delicious and nutricious!!",
-          "author": "Braam"
-        }
-      ]
-    }
+
+    "name": "Watermelon",
+    "photos": [
+      {
+        "url": "https://desibantu.com/wp-content/uploads/2014/06/watermelon_desibantu.jpg"
+      },
+      {
+        "url": "https://assets.marthastewart.com/styles/wmax-750/d20/LD104202-melon-card1/LD104202-melon-card1_horiz.jpg?itok=Z8SIz3Co"
+      },
+      {
+        "url": "https://www.watermelon.org/img/Carvings/HedgehogMedium.png"
+      }
+    ],
+    "reviews": [
+      {
+        "reviewContent": "The taste just was not as good as I thought it would be",
+        "author": "Ted Mosby"
+      },
+      {
+        "reviewContent": "Love it!!",
+        "author": "Marshall Erikson"
+      },
+      {
+        "reviewContent": "Looks nothing like the porcupine in the picture",
+        "author": "Lily Alrden"
+      },
+      {
+        "reviewContent": "It's delicious and nutricious!!",
+        "author": "Braam"
+      }
+    ]
   },
 
   {
-    "switch": {
-      "name": "Nintendo Switch",
-      "photos": [
-        {
-          "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Nintendo-Switch-Console-Docked-wJoyConRB.jpg"
-        },
-        {
-          "url": "https://cnet1.cbsistatic.com/img/zQ4d2DqUm34BzEPzlBWvNz48XV8=/770x433/2017/02/23/5bf20b56-a1a7-4587-868f-f9f848dbc7bf/nintendo-switch-console-4923.jpg"
-        },
-        {
-          "url": "https://cdn.wccftech.com/wp-content/uploads/2018/05/WCCFnintendoswitch2-740x429.jpg"
-        }
-      ],
-      "reviews": [
-        {
-          "reviewContent": "I love how many ways there are to play.",
-          "author": "Burt Smith"
-        },
-        {
-          "reviewContent": "Get Mario Kart with it!!",
-          "author": "The Editor of the New York Times"
-        },
-        {
-          "reviewContent": "Easy to play on the go.",
-          "author": "Seth Rogen"
-        },
-        {
-          "reviewContent": "Love connecting it to my home tv.",
-          "author": "Braam"
-        }
-      ]
-    }
+    "name": "Nintendo Switch",
+    "photos": [
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Nintendo-Switch-Console-Docked-wJoyConRB.jpg"
+      },
+      {
+        "url": "https://cnet1.cbsistatic.com/img/zQ4d2DqUm34BzEPzlBWvNz48XV8=/770x433/2017/02/23/5bf20b56-a1a7-4587-868f-f9f848dbc7bf/nintendo-switch-console-4923.jpg"
+      },
+      {
+        "url": "https://cdn.wccftech.com/wp-content/uploads/2018/05/WCCFnintendoswitch2-740x429.jpg"
+      }
+    ],
+    "reviews": [
+      {
+        "reviewContent": "I love how many ways there are to play.",
+        "author": "Burt Smith"
+      },
+      {
+        "reviewContent": "Get Mario Kart with it!!",
+        "author": "The Editor of the New York Times"
+      },
+      {
+        "reviewContent": "Easy to play on the go.",
+        "author": "Seth Rogen"
+      },
+      {
+        "reviewContent": "Love connecting it to my home tv.",
+        "author": "Braam"
+      }
+    ]
   },
 
   {
-    "Pcontroller": {
-      "name": "PS4 Controller",
-      "photos": [
-        {
-          "url": "https://desibantu.com/wp-content/uploads/2014/06/watermelon_desibantu.jpg"
-        },
-        {
-          "url": "https://assets.marthastewart.com/styles/wmax-750/d20/LD104202-melon-card1/LD104202-melon-card1_horiz.jpg?itok=Z8SIz3Co"
-        },
-        {
-          "url": "https://cdn3.volusion.com/lnxhw.lsjwt/v/vspfiles/photos/PS4-White-Out-2.jpg"
-        }
-      ],
-      "reviews": [
-        {
-          "reviewContent": "The shape is weird.",
-          "author": "Jim Halpert"
-        },
-        {
-          "reviewContent": "Well it's good just not as good as the xbox controller.",
-          "author": "Michael Scott"
-        },
-        {
-          "reviewContent": "Could use better feeling plastic.",
-          "author": "Pam Halpert"
-        },
-        {
-          "reviewContent": "I love this controller!!",
-          "author": "Braam"
-        }
-      ]
-    }
+    "name": "PS4 Controller",
+    "photos": [
+      {
+        "url": "https://desibantu.com/wp-content/uploads/2014/06/watermelon_desibantu.jpg"
+      },
+      {
+        "url": "https://assets.marthastewart.com/styles/wmax-750/d20/LD104202-melon-card1/LD104202-melon-card1_horiz.jpg?itok=Z8SIz3Co"
+      },
+      {
+        "url": "https://cdn3.volusion.com/lnxhw.lsjwt/v/vspfiles/photos/PS4-White-Out-2.jpg"
+      }
+    ],
+    "reviews": [
+      {
+        "reviewContent": "The shape is weird.",
+        "author": "Jim Halpert"
+      },
+      {
+        "reviewContent": "Well it's good just not as good as the xbox controller.",
+        "author": "Michael Scott"
+      },
+      {
+        "reviewContent": "Could use better feeling plastic.",
+        "author": "Pam Halpert"
+      },
+      {
+        "reviewContent": "I love this controller!!",
+        "author": "Braam"
+      }
+    ]
   },
 
   {
-    "Xcontroller": {
-      "name": "Xbox Controller",
-      "photos": [
-        {
-          "url": "https://compass-ssl.xbox.com/assets/d3/d8/d3d83d26-d0df-49b8-9ad2-f213425a091d.jpg?n=X1-Wireless-Controller-Black_Gallery_1056x594_02.jpg"
-        },
-        {
-          "url": "https://compass-ssl.xbox.com/assets/6b/2d/6b2d7e1d-ad58-45d5-981d-68f4a93f2ec1.jpg?n=X1-Wireless-Controller-GreyGreen_Gallery_1056x594_02.jpg"
-        },
-        {
-          "url": "https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge_wm_brw/public/field/image/2018/04/xb1-controller-shell-3.jpg?itok=KkHxtkCe"
-        }
-      ],
-      "reviews": [
-        {
-          "reviewContent": "This controller is terrible and feels uncomfortable.",
-          "author": "Mike"
-        },
-        {
-          "reviewContent": "Love it!!",
-          "author": "Dave Matthews"
-        },
-        {
-          "reviewContent": "I wish it had more features, but it's a good controller",
-          "author": "Jimmy Newtron"
-        },
-        {
-          "reviewContent": "It's delicious and nutricious!!",
-          "author": "Jakey"
-        }
-      ]
-    }
+    "name": "Xbox Controller",
+    "photos": [
+      {
+        "url": "https://compass-ssl.xbox.com/assets/d3/d8/d3d83d26-d0df-49b8-9ad2-f213425a091d.jpg?n=X1-Wireless-Controller-Black_Gallery_1056x594_02.jpg"
+      },
+      {
+        "url": "https://compass-ssl.xbox.com/assets/6b/2d/6b2d7e1d-ad58-45d5-981d-68f4a93f2ec1.jpg?n=X1-Wireless-Controller-GreyGreen_Gallery_1056x594_02.jpg"
+      },
+      {
+        "url": "https://www.windowscentral.com/sites/wpcentral.com/files/styles/xlarge_wm_brw/public/field/image/2018/04/xb1-controller-shell-3.jpg?itok=KkHxtkCe"
+      }
+    ],
+    "reviews": [
+      {
+        "reviewContent": "This controller is terrible and feels uncomfortable.",
+        "author": "Mike"
+      },
+      {
+        "reviewContent": "Love it!!",
+        "author": "Dave Matthews"
+      },
+      {
+        "reviewContent": "I wish it had more features, but it's a good controller",
+        "author": "Jimmy Newtron"
+      },
+      {
+        "reviewContent": "It's delicious and nutricious!!",
+        "author": "Jakey"
+      }
+    ]
   }
 
 
