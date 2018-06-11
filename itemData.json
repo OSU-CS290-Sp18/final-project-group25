@@ -1,10 +1,7 @@
 [
   {
-<<<<<<< HEAD
     "id": "Watermelon",
-=======
 
->>>>>>> 2add373298f9161121af81fe592919e7708d04de
     "name": "watermelon",
     "photos": [
       {
@@ -76,10 +73,10 @@
     "name": "pcontroller",
     "photos": [
       {
-        "url": "https://desibantu.com/wp-content/uploads/2014/06/watermelon_desibantu.jpg"
+        "url": "http://img.bbystatic.com/BestBuy_US/images/products/5871/5871323_sa.jpg"
       },
       {
-        "url": "https://assets.marthastewart.com/styles/wmax-750/d20/LD104202-melon-card1/LD104202-melon-card1_horiz.jpg?itok=Z8SIz3Co"
+        "url": "https://i5.walmartimages.com/asr/fbf0567c-d665-4583-89c9-d8ad14b77f55_1.5f63c340889f2ef0ca94c8e27ad476c6.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF"
       },
       {
         "url": "https://cdn3.volusion.com/lnxhw.lsjwt/v/vspfiles/photos/PS4-White-Out-2.jpg"
@@ -137,7 +134,34 @@
         "author": "Jakey"
       }
     ]
-  }
+  },
 
+  {
+
+    "id" : "featured",
+    "cards": [
+      {
+        "url": "https://compass-ssl.xbox.com/assets/d3/d8/d3d83d26-d0df-49b8-9ad2-f213425a091d.jpg?n=X1-Wireless-Controller-Black_Gallery_1056x594_02.jpg",
+        "item" : "Xbox Controller",
+        "to" : "xcontroller"
+      },
+      {
+        "url": "http://img.bbystatic.com/BestBuy_US/images/products/5871/5871323_sa.jpg",
+        "item" : "PS4 Controller",
+        "to" : "pcontroller"
+      },
+      {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/76/Nintendo-Switch-Console-Docked-wJoyConRB.jpg",
+        "item" : "Nintendo Switch",
+        "to" : "nintendoswitch"
+      },
+      {
+        "url": "https://desibantu.com/wp-content/uploads/2014/06/watermelon_desibantu.jpg",
+        "item" : "Watermelon",
+        "to" : "nintendoswitch"
+      }
+
+    ]
+  }
 
 ]
