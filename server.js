@@ -40,16 +40,24 @@ app.use(bodyParser.json());
 
 app.use(express.static('public'));
 
-app.get('/', function(req, res){
-  var itemDataMongo = mongoDB.collection('items');
-  res.status(200).render('featurePage', {
-    items: itemData
+app.get('/', function(req, res, next){
+  next();
+});
+
+app.get('/featured', function(req, res){
+  var itemCollection = mongoDB.collection('itemData');
+  itemCollection.find().toArray(function(err, items){
+    if(err){
+      res.status(500).send("Error fetching item from DB.");
+    } else if(items.length > 0){
+      res.status(200).render('featurePage', items[0]);
+    }
   });
 });
 
 app.get('/featured/:item', function (req, res, next) {
   var item = req.params.item;
-  var itemCollection = mongoDB.collection('items');
+  var itemCollection = mongoDB.collection('itemData');
   itemCollection.find({name: item}).toArray(function (err, itemDocs){
     console.log(itemDocs);
     if(err){
