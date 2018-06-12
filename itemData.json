@@ -130,8 +130,42 @@
         "author": "Jimmy Newtron"
       },
       {
-        "reviewContent": "🚗 I can cars with this controller.",
+        "reviewContent": "🚗 I can race cars with this controller.",
         "author": "Jakey"
+      }
+    ]
+  },
+
+  {
+    "id": "Nintendo DS",
+    "name": "ds",
+    "photos": [
+      {
+        "url": "https://static-ca.ebgames.ca/images/products/606502/3max.jpg"
+      },
+      {
+        "url": "https://images-na.ssl-images-amazon.com/images/I/419Qd-m7mPL.jpg"
+      },
+      {
+        "url": "https://shop.r10s.jp/at-field/cabinet/dshard/dslitecb02.jpg"
+      }
+    ],
+    "reviews": [
+      {
+        "reviewContent": "So portable and fun.",
+        "author": "Bill Nye"
+      },
+      {
+        "reviewContent": "✔ Easy to hold and to use.",
+        "author": "Ben 10"
+      },
+      {
+        "reviewContent": "I wish the screen was a little bigger, it's hard to see.",
+        "author": "Danny Phantom"
+      },
+      {
+        "reviewContent": "So many different games to play.",
+        "author": "Spongebob Squarepants"
       }
     ]
   },
@@ -169,6 +203,20 @@
         "item" : "Watermelon",
         "to" : "watermelon"
       }
+
+    ]
+  },
+
+  {
+
+    "id" : "recent",
+    "cards": [
+      {
+        "url": "https://static-ca.ebgames.ca/images/products/606502/3max.jpg",
+        "item" : "Nintendo DS",
+        "to" : "ds"
+      }
+
 
     ]
   }
