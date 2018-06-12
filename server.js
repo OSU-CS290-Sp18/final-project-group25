@@ -101,21 +101,31 @@ app.get('/items/:item', function (req, res, next) {
 
 app.post('/items/:item/addReview', function(req, res, next){
   var item = req.params.item.toLowerCase();
-  if(itemData[item]){
-    if(req.body && req.body.reviewContent && req.body.author){
-      var review = {
-        reviewContent: req.body.reviewContent,
-        author: req.body.author
-      };
-      itemData[item].review.push(review);
-      res.status(200).end();
+  if(req.body && req.body.reviewContent && req.body.author){
+    var review = {
+      reviewContent: req.body.reviewContent,
+      author: req.body.author
+    };
+      var itemCollection = mongoDB.collection('itemData');
+      itemCollection.updateOne(
+        { name: item },
+        { $push: { reviews: review }},
+        function(err, result) {
+          if(err){
+            res.status.send(500).send("Error inserting photo into DB.")
+          } else {
+            if(result.matchedCount > 0) {
+              res.status(200).end();
+            } else{
+              next();
+            }
+          }
+        }
+      );
     } else {
       res.status(400).send("Request needs a JSON body with caption and photoURL.")
     }
-  } else{
-    next();
-  }
-});
+  });
 
 app.get('*', function (req, res){
   res.status(404).render('404');
