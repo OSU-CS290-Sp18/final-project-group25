@@ -73,6 +73,17 @@ app.get('/funny', function(req, res){
   });
 });
 
+app.get('/new', function(req, res){
+  var itemCollection = mongoDB.collection('itemData');
+  itemCollection.find({id: "new"}).toArray(function(err, items){
+    if(err){
+      res.status(500).send("Error fetching item from DB.");
+    } else if(items.length > 0){
+      res.status(200).render('featurePage', items[0]);
+    }
+  });
+});
+
 app.get('/items/:item', function (req, res, next) {
   var item = req.params.item.toLowerCase();
   var itemCollection = mongoDB.collection('itemData');
