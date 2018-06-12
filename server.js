@@ -18,11 +18,11 @@ var mongoDB = null;
 var itemData = require('./itemData');
 
 
-var mongoHost = "classmongo.engr.oregonstate.edu";//process.env.MONGO_HOST;
+var mongoHost = process.env.MONGO_HOST; //classmongo.engr.oregonstate.edu
 var mongoPort = process.env.MONGO_PORT || '27017';
-var mongoUsername = "cs290_doshin";//process.env.MONGO_USERNAME;
-var mongoPassword= "cs290_doshin";//process.env.MONGO_PASSWORD;
-var mongoDBName = "cs290_doshin"; //process.env.MONGO_DB_NAME;
+var mongoUsername = process.env.MONGO_USERNAME; //cs290_doshin
+var mongoPassword= process.env.MONGO_PASSWORD; //cs290_doshin
+var mongoDBName = process.env.MONGO_DB_NAME; //cs290_doshin
 
 var mongoURL = "mongodb://" + mongoUsername + ":" + mongoPassword + "@" + mongoHost + ":" + mongoPort + "/" +mongoDBName;
 
@@ -87,14 +87,14 @@ app.get('/items/:item', function (req, res, next) {
     }
   });
 });
-/*
-app.post('/people/:item/addReview', function(req, res, next){
+
+app.post('/items/:item/addReview', function(req, res, next){
   var item = req.params.item.toLowerCase();
   if(itemData[item]){
     if(req.body && req.body.reviewContent && req.body.author){
       var review = {
-        reviewContent = req.body.reviewContent,
-        author = req.body.author
+        reviewContent: req.body.reviewContent,
+        author: req.body.author
       };
       itemData[item].review.push(review);
       res.status(200).end();
@@ -105,7 +105,7 @@ app.post('/people/:item/addReview', function(req, res, next){
     next();
   }
 });
-*/
+
 app.get('*', function (req, res){
   res.status(404).render('404');
 });
